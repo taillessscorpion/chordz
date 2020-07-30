@@ -1,0 +1,238 @@
+.findContainer {
+    background-image: url(../images/findBackground.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#mainContainer {
+    height: 100%;
+    width: 80vw;
+    position: absolute;
+    bottom: 0px;
+    background-image: linear-gradient(to top, rgba(162, 218, 255, 0.5), rgba(253, 247, 194, 0.8));
+    box-shadow: 0px 50vh 50vw 5vw rgba(162, 218, 255, 0.6), 0px -50vh 50vw 5vw rgba(253, 247, 194, 1);
+    background-size: cover;
+    z-index: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    padding-top: 5vh;
+}
+#mainContainer .topMain{
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 2vh;
+}
+#mainContainer .botMain{
+    flex-grow: 1;
+    width: 100%;
+    background-color: white;
+}
+#musicSheetContainer:focus-within {
+    z-index: 3;
+}
+
+#pianoKeyboardContainer {
+    width: 95vw;
+    height: 150px;
+    position: absolute;
+    border-radius: 10px;
+    border: 2px solid black;
+    bottom: 10px;
+    z-index: 4;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+#pianoKeyboardContainer img {
+    width: 100%;
+    height: auto;
+
+}
+#guitarFretboardContainer{
+    position: fixed;
+    top: 0;
+    width: 105vw;
+    z-index: 1;
+}
+#guitarFretboardContainer img {
+    width: 100%;
+    height: auto;
+}
+#tempoMeterContainer{
+    height: 150px;
+    width: 130px;
+    background-image: linear-gradient(rgb(50, 50, 50, 0.5), rgb(0, 0, 0, 0.8));
+    right: 20px;
+    top: 45px;
+    padding: 5px;
+    position: fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 6;
+}
+#noteMeterContainer {
+    height: 100vh;
+    width: 150px;
+    max-width: 20%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    align-items: flex-end;
+    z-index: 1;
+}
+#noteMeterContainer:hover {
+    z-index: 5;
+}
+
+#mediaContainer{
+    height: calc(30vh - 45px);
+    width: 300px;
+    max-width: 30%;
+    background-color: rgba(155, 155, 155, 0.753);
+    position: fixed;
+    left: 0;
+    top: 45px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 2;
+
+
+
+
+    opacity: 0;
+}
+#missionTagContainer{
+    height: calc(70vh - 5px);
+    width: 250px;
+    max-width: 30%;
+    background-color: rgba(192, 189, 189, 0.753);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    border-top-right-radius: 10px;
+
+    z-index: 2;
+    opacity: 0;
+}
+/* #missionTagContainer:hover {
+    z-index: 5;
+} */
+
+.findContainer .functionBtn {
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    display: block;
+    background-color: rgb(27, 123, 233);
+    top: 10px;
+    border-radius: 5px;
+    z-index: 10;
+}
+.findContainer .functionBtn:hover {
+    background-color: rgb(208, 230, 255);
+
+}
+.findContainer .functionBtn:active {
+    background-color: rgb(255, 66, 66);
+}
+
+
+
+#infoBtn {
+    left: 5px;
+    background-image: url(../images/infoBtn.png);
+    background-size: cover;
+}
+
+#mediaBtn {
+    left: 40px;
+    background-image: url(../images/mediaBtn.png);
+    background-size: cover;
+}
+
+#keyboardBtn {
+    right: 105px;
+    background-image: url(../images/keyboardBtn.png);
+    background-size: cover;
+}
+
+#tempoBtn {
+    right: 70px;
+    background-image: url(../images/tempoMeterBtn.jpg);
+    background-size: cover;
+}
+
+#frequencyBtn {
+    right: 35px;
+    background-image: url(../images/frequencyMeterBtn.png);
+    background-size: cover;
+}
+.closeBtn {
+    position: absolute;
+    color: rgb(235, 235, 235);
+    background-color: rgb(202, 4, 4);
+    border-radius: 3px;
+    height: 13px;
+    line-height: 13px;
+}
+.closeBtn:hover {
+    background-color: white;
+    color: rgb(202, 0, 0);
+}
+.closeBtn:active {
+    color: white;
+    background-color: red;
+}
+
+
+
+@keyframes guitarFretboardRunToRight {
+    0% {
+        left: -100vw;
+        opacity: 0.2;
+        z-index: 10
+    }
+    30% {
+        opacity: 0.9;
+        z-index: 9
+    }
+    80% {
+        opacity: 1;
+        z-index: 8
+    }
+    100% {
+        left: 0vw;
+    }
+}
+@keyframes guitarFretboardRunToLeft {
+    0% {
+        left: 0;
+        
+    }
+    30% {
+        opacity: 1;
+        z-index: 8
+    }
+    80% {
+        
+        opacity: 0.9;
+        z-index: 9
+    }
+    100% {
+        left: -100vw;
+        opacity: 0.2;
+        z-index: 10
+    }
+}
